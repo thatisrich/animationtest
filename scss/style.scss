@@ -15,6 +15,18 @@
 	100% { background-position: center -602px; }
 }
 
+@-webkit-keyframes chute {
+	0% { top: 120%; }
+	100% { top: -80%; }
+}
+
+@-webkit-keyframes flop {
+	0% { -webkit-transform: rotate(0deg); }
+	25% { -webkit-transform: rotate(10deg); }
+	75% { -webkit-transform: rotate(-10deg); }
+	100% { -webkit-transform: rotate(0deg); }
+}
+
 
 
 /* =Wallpaper
@@ -29,6 +41,7 @@
 	display: block;
 	height: 100%;
 	position: absolute;
+	overflow: hidden;
 	width: 100%;
 	h1 {
 		color: #fada39;
@@ -100,4 +113,50 @@
 .right-arm {
 	animation-name: arm;
 	position: absolute;
+}
+
+/* =Sargent
+----------------------------------------- */
+.sarge {
+	background: url('../images/_tmp-sarge.png') center bottom no-repeat;
+	-webkit-animation: chute 8s 0 infinite forwards ease-in-out;
+	-webkit-animation-name: chute, flop;
+	-webkit-animation-duration: 8s, 5s;
+	height: 200px;
+	left: 18%;
+	position: absolute;
+	top: 120%;
+	width: 125px;
+	z-index: 20;
+}
+
+/* =Major
+----------------------------------------- */
+.major {
+	background: url('../images/_tmp-sarge.png') center bottom no-repeat;
+	-webkit-animation: chute 6s 1s infinite forwards ease-in-out;
+	-webkit-animation-name: chute, flop;
+	-webkit-animation-duration: 8s, 5s;
+	height: 200px;
+	left: 70%;
+	position: absolute;
+	top: 140%;
+	width: 125px;
+	z-index: 20;
+}
+
+/* =General
+----------------------------------------- */
+.general {
+	background: url('../images/_tmp-sarge.png') center bottom no-repeat;
+	background-size: cover;
+	-webkit-animation: chute 6s 1s infinite forwards ease-in-out;
+	-webkit-animation-name: chute, flop;
+	-webkit-animation-duration: 8s, 5s;
+	height: 400px;
+	left: 40%;
+	position: absolute;
+	top: 140%;
+	width: 200px;
+	z-index: 25;
 }
