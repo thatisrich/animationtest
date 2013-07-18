@@ -1,0 +1,103 @@
+@import 'partial/normalise';
+
+/* =Keyframes
+----------------------------------------- */
+
+@-webkit-keyframes sway {
+	0% { left: 46%; }
+	25% { left: 48%; }
+	75% { left: 44%; }
+	100% { left: 46%; }
+}
+
+@-webkit-keyframes slide {
+	0% { background-position: center top; }
+	100% { background-position: center -602px; }
+}
+
+
+
+/* =Wallpaper
+----------------------------------------- */
+
+.wall {
+	background: url('../images/bg_wallpaper_tile.png') center bottom repeat;
+	-webkit-animation: slide 1s linear 0 infinite forwards; /* Safari 4+ */
+	   -moz-animation: slide 4s 0 infinite forwards; /* Fx 5+ */
+	     -o-animation: slide 4s 0 infinite forwards; /* Opera 12+ */
+		 	animation: slide 4s 0 infinite forwards; /* IE 10+ */
+	display: block;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	h1 {
+		color: #fada39;
+		font-family: 'Gill Sans';
+		font-size: 5em;
+		font-weight: 700;
+		letter-spacing: -.03em;
+		margin: .4em 0;
+		text-align: center;
+		text-shadow: 0 -.1em .3em rgba(0,0,0,.2);
+		text-transform: uppercase;
+		 -webkit-text-stroke: 4px #014687;
+		 span {
+			 display: block;
+			 line-height: 1;
+		 }
+		 .one {
+			 font-size: 1em;
+			 -webkit-text-stroke: 4px #014687;
+		 }
+		 .two {
+			 font-size: .5em;
+			 -webkit-text-stroke: 3px #014687;
+		 }
+	}
+}
+
+
+/* =Buzz
+----------------------------------------- */
+
+.buzz {
+	-webkit-animation: sway 4s 0 infinite forwards; /* Safari 4+ */
+	   -moz-animation: sway 4s 0 infinite forwards; /* Fx 5+ */
+	     -o-animation: sway 4s 0 infinite forwards; /* Opera 12+ */
+		 	animation: sway 4s 0 infinite forwards; /* IE 10+ */
+	height: 200px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	width: 125px;
+}
+
+.buzz {
+	z-index: 1;
+}
+
+.shadow {
+	background: url('../images/buzz-shadow.png') center center no-repeat;
+	height: 200px;
+	position: relative;
+	width: 125px;
+	z-index: 1;
+}
+
+.body {
+	background: url('../images/buzz-body.png') center bottom no-repeat;
+	height: 200px;
+	position: absolute;
+	width: 125px;
+	z-index: 2;
+}
+
+.left-arm {
+	animation-name: arm;
+	position: absolute;
+}
+
+.right-arm {
+	animation-name: arm;
+	position: absolute;
+}
